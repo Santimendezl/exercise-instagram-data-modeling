@@ -71,8 +71,7 @@ class Favoritos_personas(Base):
     # Here we define columns for the table person
     # Notice that each column is also a normal Python instance attribute.
     id = Column(Integer, primary_key=True)
-    usuario_id = Column(String(50), nullable=False)
-    personas_id = Column(String(50), ForeignKey('personas.id')) 
+    personas_id = Column(Integer, ForeignKey('personas.id')) 
     usuario_id = Column(Integer, ForeignKey('usuario.id'))  
     
 class Favoritos_planetas(Base):
@@ -80,8 +79,7 @@ class Favoritos_planetas(Base):
     # Here we define columns for the table person
     # Notice that each column is also a normal Python instance attribute.
     id = Column(Integer, primary_key=True)
-    usuario_id = Column(String(50), nullable=False)
-    planetas_id = Column(String(20), ForeignKey('planetas.id'))
+    planetas_id = Column(Integer, ForeignKey('planetas.id'))
     usuario_id = Column(Integer, ForeignKey('usuario.id'))  
 
 class Favoritos_vehiculos(Base):
@@ -89,8 +87,7 @@ class Favoritos_vehiculos(Base):
     # Here we define columns for the table person
     # Notice that each column is also a normal Python instance attribute.
     id = Column(Integer, primary_key=True)
-    usuario_id = Column(Integer, nullable=False)
-    vehiculos_id = Column(String(20), ForeignKey('vehiculos.id'))
+    vehiculos_id = Column(Integer, ForeignKey('vehiculos.id'))
     usuario_id = Column(Integer, ForeignKey('usuario.id'))  
   
 
